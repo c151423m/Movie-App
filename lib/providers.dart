@@ -5,6 +5,7 @@ import 'env_config.dart';
 import 'movie.dart';
 export 'movie.dart';
 
+// http provider of API base url
 final dioProvider = Provider<Dio>((ref) {
   return Dio(BaseOptions(
     baseUrl: EnvironmentConfig.BASE_URL,

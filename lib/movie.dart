@@ -1,4 +1,7 @@
+// Class to represent movie object from the API
+
 class Movie {
+  // Movie data
   final bool adult;
   final String backdropPath;
   final List<int> genreIds;
@@ -13,7 +16,7 @@ class Movie {
   final bool video;
   final num voteAverage;
   final num voteCount;
-
+// instan
   Movie(
       {this.adult,
       this.backdropPath,
@@ -29,7 +32,7 @@ class Movie {
       this.video,
       this.voteAverage,
       this.voteCount});
-
+// factory to map the json
   factory Movie.fromJson(Map<String, dynamic> json) {
     return Movie(
         adult: json['adult'],
@@ -49,6 +52,7 @@ class Movie {
   }
 }
 
+// This is probably the response data
 class MovieResponse {
   int page;
   List<Movie> results;
@@ -80,8 +84,7 @@ extension MovieTypeExtension on MovieType {
   String get value => toString().split('.').last;
   String get name {
     String name;
-    switch(this){
-
+    switch (this) {
       case MovieType.popular:
         name = "Popular";
         break;
